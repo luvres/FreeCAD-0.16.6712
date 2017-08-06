@@ -1,0 +1,10 @@
+
+// Version Number
+#define FCVersionMajor "0"
+#define FCVersionMinor "16"
+#define FCVersionName  "Vulcan"
+// test: Hash (da2d364457257a7a8c6fb2137cea12c45becd71a), Date: 2017-07-17 19:27:47 +0200
+#define FCRevision      "$WCREV$"      //Highest committed revision number
+#define FCRevisionDate  "$WCDATE$"     //Date of highest committed revision
+#define FCRepositoryURL "$WCURL$"      //Repository URL of the working copy
+
