@@ -12,7 +12,9 @@ izone/freecad:nvidia-xenial bash
 ```
 
 ```
-apt-get install \
+apt-get update
+
+apt-get install -y \
 git \
 build-essential \
 cmake \
