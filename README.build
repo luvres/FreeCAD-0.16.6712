@@ -1,0 +1,59 @@
+FreeCAD
+-------
+
+### Xenial
+```
+docker run -ti --rm --name FreeCAD \
+--net=host \
+-e DISPLAY=unix$DISPLAY \
+-v /tmp/.X11-unix \
+-v $HOME/.Xauthority:/root/.Xauthority \
+izone/freecad:nvidia-xenial bash
+```
+
+```
+apt-get install \
+git \
+build-essential \
+cmake \
+python \
+python-matplotlib \
+libtool \
+libcoin80-dev \
+libsoqt4-dev \
+libxerces-c-dev \
+libboost-dev \
+libboost-filesystem-dev \
+libboost-regex-dev \
+libboost-program-options-dev \
+libboost-signals-dev \
+libboost-thread-dev \
+libboost-python-dev \
+libqt4-dev \
+libqt4-opengl-dev \
+qt4-dev-tools \
+python-dev \
+python-pyside \
+pyside-tools \
+liboce*-dev \
+oce-draw \
+libeigen3-dev \
+libqtwebkit-dev \
+libshiboken-dev \
+libpyside-dev \
+libode-dev \
+swig \
+libzipios++-dev \
+libfreetype6 \
+libfreetype6-dev \
+netgen-headers
+```
+```
+git clone https://github.com/luvres/FreeCAD-0.16.6712.git
+mkdir freecad-build && cd freecad-build
+
+cmake ../FreeCAD-0.16.6712 -DCMAKE_BUILD_TYPE=Debug -DBUILD_FEM_NETGEN=ON 
+
+time make -j$(nproc)
+```
+
