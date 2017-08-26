@@ -50,11 +50,24 @@ libfreetype6 \
 libfreetype6-dev \
 netgen-headers
 ```
+
+```
+# liboce*-dev
+liboce-modeling-dev \
+liboce-visualization-dev \
+liboce-foundation-dev \
+liboce-ocaf-lite-dev \
+liboce-ocaf-dev
+```
+
 ```
 git clone https://github.com/luvres/FreeCAD-0.16.6712.git
 mkdir freecad-build && cd freecad-build
 
-cmake ../FreeCAD-0.16.6712 -DCMAKE_BUILD_TYPE=Debug -DBUILD_FEM_NETGEN=ON 
+cmake \
+../FreeCAD-0.16.6712 \
+-DBUILD_FEM_NETGEN=ON \
+-DCMAKE_INSTALL_PREFIX="/usr/lib/freecad"
 
 time make -j$(nproc)
 ```
