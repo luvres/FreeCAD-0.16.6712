@@ -37,7 +37,11 @@ qt4-dev-tools \
 python-dev \
 python-pyside \
 pyside-tools \
-liboce*-dev \
+liboce-modeling-dev \
+liboce-visualization-dev \
+liboce-foundation-dev \
+liboce-ocaf-lite-dev \
+liboce-ocaf-dev
 oce-draw \
 libeigen3-dev \
 libqtwebkit-dev \
@@ -50,16 +54,6 @@ libfreetype6 \
 libfreetype6-dev \
 netgen-headers
 ```
-
-```
-# liboce*-dev
-liboce-modeling-dev \
-liboce-visualization-dev \
-liboce-foundation-dev \
-liboce-ocaf-lite-dev \
-liboce-ocaf-dev
-```
-
 ```
 git clone https://github.com/luvres/FreeCAD-0.16.6712.git
 mkdir freecad-build && cd freecad-build
